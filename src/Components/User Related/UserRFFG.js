@@ -6,7 +6,7 @@ import { GithubContext } from '../../Context/UserContext'
 import {GoRepo, GoGist} from "react-icons/go"
 import {FiUsers, FiUserPlus} from "react-icons/fi"
 
-const UserInfo = () => {
+const UserRFFG = () => {
     const {githubUser} = useContext(GithubContext);
     const {public_repos, followers, following, public_gists} = githubUser;
     const items = [
@@ -110,7 +110,7 @@ p{
 }
 span{
     font-size: 2rem;
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
 }
 /* Colors */
 .cardRed{
@@ -131,4 +131,4 @@ span{
 }
 `;
 
-export default UserInfo
+export default UserRFFG;

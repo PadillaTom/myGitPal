@@ -23,7 +23,7 @@ max-width: 100vw;
 
 html {
   max-width: 100vw;
-  background-color: #fcfdff; 
+  background-color: var(--BgWhite); 
 }
 ul {
   list-style: none;
@@ -53,7 +53,7 @@ Variables
   --BgWhite: #fcfdff;
   --SecondWhite: #f7f8fd;
   --ActiveWhite: #f0f4f4;
-  --ShadowSmooth: #cac9c9a9; 
+  --ShadowSmooth: #d3d3d3b9; 
   /* Fonts */
   --FontLora: 'Lora', serif;
   --FontMontserrat: 'Montserrat', sans-serif;
