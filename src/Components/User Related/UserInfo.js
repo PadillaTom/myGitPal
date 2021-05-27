@@ -25,14 +25,14 @@ const UserInfo = () => {
             icon: <FiUsers className="singleIcon"></FiUsers>,
         },
         {
-            id: 1,
+            id: 3,
             label: "Following",
             value: following,
             color: "--PrimaryPale",
             icon: <FiUserPlus className="singleIcon"></FiUserPlus>,
         },
         {
-            id: 1,
+            id: 4,
             label: "Gists",
             value: public_gists,
             color: "--PrimaryCyan",
