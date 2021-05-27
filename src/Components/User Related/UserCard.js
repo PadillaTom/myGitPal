@@ -46,7 +46,7 @@ const UserCard = () => {
                     location && <p className="single-link"><GoLocation className="singleLink-icon"></GoLocation> {location}</p>
                 }
                 {
-                    blog && <a href={`http://${blog}`}  target="_blank" rel="noreferrer" className="single-link"><AiOutlineLink className="singleLink-icon"></AiOutlineLink> {blog}</a>
+                    blog && <a href={`http://${blog}`}  target="_blank" rel="noreferrer" className="single-link link-hover"><AiOutlineLink className="singleLink-icon"></AiOutlineLink> {blog}</a>
                 }
             </div>
         </Wrapper>
@@ -124,10 +124,14 @@ h4{
     grid-template-columns: auto 1fr;
     align-items: center;
     margin-left: 0.3rem;
+    transition: var(--TransMain);
 }
 .singleLink-icon{
     font-size: 1.5rem;
     margin-right: 0.5rem;     
+}
+.link-hover:hover{
+    color: black;
 }
 `;
 
