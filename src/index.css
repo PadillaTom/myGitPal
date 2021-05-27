@@ -44,19 +44,22 @@ Variables
   --PrimaryRed: #b13f29;  
   --PrimaryCream: #ddb889;
   --PrimarySalmon: #e3bdb8;
-  --PrimaryPale: #f5efe9;
+  --PrimaryPale: #e7ddd2;
   --PrimaryCyan: #709693;
   --Gray: #4a4c53;
   --Gray2: #babbbc;
+  --Dark: #1d1d1d;
   --White: #ffffff;
   --BgWhite: #fcfdff;
   --SecondWhite: #f7f8fd;
-  --ActiveWhite: #f0f4f4;  
+  --ActiveWhite: #f0f4f4;
+  --ShadowSmooth: #cac9c9a9; 
   /* Fonts */
   --FontLora: 'Lora', serif;
   --FontMontserrat: 'Montserrat', sans-serif;
   /* Transitions */
-  --TransMain: 0.2s all linear;
+  --TransMain: 0.3s all linear;
+  --TransFast: 0.15s all linear;
 }
 
 /*
