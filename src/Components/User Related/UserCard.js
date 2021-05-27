@@ -31,7 +31,7 @@ const UserCard = () => {
                     <p className="twitter">@{twitter_username}</p>   
                     } 
                 </div>
-                <a href={html_url} className="git-logo">
+                <a href={html_url} target="_blank" rel="noreferrer" className="git-logo">
                     <AiFillGithub></AiFillGithub>
                 </a>
             </header>
@@ -46,7 +46,7 @@ const UserCard = () => {
                     location && <p className="single-link"><GoLocation className="singleLink-icon"></GoLocation> {location}</p>
                 }
                 {
-                    blog && <a href={`http://${blog}`} className="single-link"><AiOutlineLink className="singleLink-icon"></AiOutlineLink> {blog}</a>
+                    blog && <a href={`http://${blog}`}  target="_blank" rel="noreferrer" className="single-link"><AiOutlineLink className="singleLink-icon"></AiOutlineLink> {blog}</a>
                 }
             </div>
         </Wrapper>
@@ -70,7 +70,7 @@ position: relative;
     left: 0;
     transform: translateY(-100%);
     background: white;
-    color: var(--Gray2);
+    color: var(--Gray);
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     text-transform: capitalize;
