@@ -20,11 +20,17 @@ width: 100%;
 height: 100vh;
 display: grid;
 place-items: center;
-background: cyan;
 text-align: center;
 h1{
     font-size: 10rem;
-    color: var(--PrimaryColor);
+    color: var(--PrimaryRed);
+    font-family: var(--FontLora);
+}
+h3{
+    font-family:var(--FontMontserrat);
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
 }
 `
 export default Error
