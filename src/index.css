@@ -9,22 +9,54 @@ Globals
   padding: 0;
   box-sizing: border-box;
 }
-
-
+#root{
+width: 100vw;
+height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
 /*
 ==========
-Globals
+Variables
 ==========
 */
+
+:root {
+  /* Colors */
+  --PrimaryColor: #ff0000;  
+  /* Fonts */
+
+  /* Transitions */
+  --TransMain: 0.2s all linear;
+}
+
 /*
 ==========
-Globals
+Buttons
 ==========
 */
+.btn-primary{
+  border: 1px solid black;
+  border-radius: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  background-color: red;
+  font-size: 1.5rem;
+  letter-spacing: 1.5;
+
+  cursor: pointer;
+  transition: var(--TransMain);
+}
+.btn-primary:hover {
+  background-color: white;
+}
+
+
 /*
 ==========
-Globals
+Titles
 ==========
 */
 /*

@@ -4,7 +4,8 @@ This is a User Friendly website where you can find your favourite Github Users!
 
 ## Tools and Techonologies:
 
-Context API
+Github API
 Styled Components
 Fusion Charts
-Github API
+
+Context API
