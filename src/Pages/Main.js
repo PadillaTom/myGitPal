@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from "styled-components";
 
-import {UserRFFG, UserCard} from "../Components/User Related"
+import {UserRFFG, UserCard, Followers} from "../Components/User Related"
 
 const Main = () => {
     return (
         <main>
             <UserRFFG></UserRFFG>  
-            <UserCard></UserCard>   
+            <UserCard></UserCard>  
+            <Followers></Followers> 
         </main>
     )
 }
