@@ -8,38 +8,51 @@ const Repos = () => {
     const {repos} = useContext(GithubContext);
 
 // Reduce to get Languages Only
-    let languages = repos.reduce((total, item)=>{
-      // Destructure language for every item iterated:
-      const {language} = item;
+    const languages = repos.reduce((total, item)=>{
+      // Destructure every SingleRepo
+      const {language, stargazers_count} = item;
+
       // If Language == null: Return my object
       if (!language) return total;
-
       // *** Creating Key-Value Object for each language ***
       // {Label: languageName, Value: quantity}
 
       // Language DOES NOT EXIST: Create it, Value 1       
       if(!total[language]) {
-        total[language] = {label: language, value: 1};
+        total[language] = {label: language, value: 1, stars: stargazers_count};
       } 
       // Language EXISTS: Keep Label, Add + 1 to the previous value
       else {
-        total[language] = {...total[language], value: total[language].value + 1};
+        total[language] = { 
+          ...total[language], 
+          value: total[language].value + 1,
+          stars: total[language].stars + stargazers_count,
+        };
       }
       return total
-    },{})
-
+    },{})    
+// *** Languages ***  
 // Transform LANGUAGES to an Array of Objects: Using languages values {label, value}
 // SORT it, to keep the most used to the Top
 // SLICE to get top 5.
-    languages = Object.values(languages).sort((a,b)=>{
+    const mostUsed = Object.values(languages).sort((a,b)=>{
       return b.value - a.value;
     }).slice(0,5);
 
+// *** Stars ***
+const mostPopular = Object.values(languages).sort((a,b)=>{
+  return b.stars - a.stars;  
+}).map((item)=>{
+  return {...item, value: item.stars}
+}).slice(0,5);
+
+// *** Main ***
     return (
         <section className="section">
             <Wrapper className="section-center">
                 {/* <ExampleChart data={chartData}></ExampleChart> */}
-                <Pie3D data={languages}></Pie3D>
+                <Pie3D data={mostUsed}></Pie3D>
+                <Doughnut2D data={mostPopular}></Doughnut2D>
             </Wrapper>
         </section>
     )
