@@ -8,19 +8,29 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 ReactFC.fcRoot(FusionCharts, SelectedChart, FusionTheme);
 
 const ChartComponent = ({data}) => {
-
     // *** Chart Config ***    
     const chartConfigs = {
         type: "pie3d", // The chart type
-        width: "700", // Width of the chart
+        width: "100%", // Width of the chart
         height: "400", // Height of the chart
         dataFormat: "json", // Data type
         dataSource: {
         // Chart Configuration
         chart: {
-            caption: "Languages",
+            // Caption
+            caption: "Top 5 Languages",            
+            captionFont: "'Montserrat', sans-serif",
+            captionFontColor: "#1d1d1d",
+            // Chart
             theme: "fusion",   
-            pieRadius: "50%",
+            decimals: 0,
+            pieRadius: "60%",
+            paletteColors: "#b13f29,#e7ddd2,#ddb889,#709693,#e3bdb8",
+            // Labels
+            labelFont: "'Lora', serif",    
+            labelFontColor: "#4a4c53" ,   
+            // ToolTip: Hover line
+            showToolTip: false, 
       },
         // Data passed as Props:
         data: data

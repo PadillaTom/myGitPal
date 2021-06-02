@@ -83,12 +83,16 @@ Buttons
   box-shadow: 0px 3px 8px rgba(141, 141, 141, 0.3);
 }
 
-
 /*
 ==========
-Titles
+Sections
 ==========
 */
+.section-center{
+  width: 95%;
+  margin: 0 auto;
+}
+
 /*
 ==========
 Globals
