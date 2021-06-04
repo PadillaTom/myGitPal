@@ -31,6 +31,7 @@ const Repos = () => {
       }
       return total
     },{})    
+
 // *** Languages ***  
 // Transform LANGUAGES to an Array of Objects: Using languages values {label, value}
 // SORT it, to keep the most used to the Top
@@ -46,13 +47,31 @@ const mostPopular = Object.values(languages).sort((a,b)=>{
   return {...item, value: item.stars}
 }).slice(0,5);
 
+// *** ChartData ***
+const chartData = [
+  {
+    label: "July",
+    value: "80",
+  },
+  {
+    label: "Tom",
+    value: "100",
+  },
+  {
+    label: "Katy",
+    value: "25",
+  },
+]
+
 // *** Main ***
     return (
         <section className="section">
             <Wrapper className="section-center">
                 {/* <ExampleChart data={chartData}></ExampleChart> */}
                 <Pie3D data={mostUsed}></Pie3D>
+                <Column3D data={chartData}></Column3D>
                 <Doughnut2D data={mostPopular}></Doughnut2D>
+                <Bar3D data={chartData}></Bar3D>                
             </Wrapper>
         </section>
     )
